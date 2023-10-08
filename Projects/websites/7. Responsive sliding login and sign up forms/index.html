@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and SignUp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="all.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="square square1" style="--i:0"></div>
+        <div class="square square2" style="--i:3"></div>
+        <div class="square square3" style="--i:1"></div>
+        <div class="square square4" style="--i:2"></div>
+        <div class="square square5" style="--i:5"></div>
+        <div class="circle circle1" style="--i:1"></div>
+        <div class="circle circle2" style="--i:4"></div>
+        <div class="circle circle3" style="--i:2"></div>
+        <div class="circle circle4" style="--i:3"></div>
+        <div class="circle circle5" style="--i:0"></div>
+
+        <div class="login">
+            <h1>LOGIN</h1>
+            <label for="email">
+                <input type="email" id="email" placeholder="example@gmail.com">
+            </label>
+            <label for="password">
+                <input type="password" id="password" placeholder="password">
+            </label>
+            <span><a href="#">forgotten password?</a></span>
+            <button>login</button>
+            <div class="media">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin-in"></i> </div>
+        </div>
+
+        <div class="signUpText">
+            <p>Don't have an account?</p>
+            <button class="signUp-btn">Sign Up</button>
+        </div>
+
+        <div class="signUp">
+            <h1>SIGN UP</h1>
+            <p>Sign up with:</p>
+            <div class="media">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+            <label for="email">Email: </label>
+            <input type="email" id="email" placeholder="example@gmail.com">
+
+            <label for="password">Password: </label>
+            <input type="password" id="password" placeholder="password">
+
+            <label for="confirmPassword">Confirm:</label>
+            <input type="password" id="confirmPassword" placeholder="confirm password">
+
+            <button>Sign Up</button>
+
+        </div>
+
+        <div class="loginText">
+            <p>Already have an account?</p>
+            <button class="login-btn">Login</button>
+        </div>
+
+
+    </div>
+</body>
+
+
+<script>
+    let signUpBtn = document.querySelector('.signUp-btn');
+    let loginBtn = document.querySelector('.login-btn');
+    let container = document.querySelector('.container');
+
+    signUpBtn.addEventListener('click', () => {
+        container.classList.add('active');
+    })
+
+    loginBtn.addEventListener('click', () => {
+        container.classList.remove('active');
+    })
+</script>
+
+</html>
