@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+    background: rgb(0, 3, 10);
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    background-color: rgb(2, 9, 109);
+    padding: 80px 50px;
+    box-shadow: 1px 1px 8px 8px #000;
+    z-index: 666;
+    border: 1px solid #000;
+}
+
+.container h1 {
+    width: 80%;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    top: 10px;
+    letter-spacing: 2px;
+    z-index: 888;
+}
+
+.container h2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    z-index: 888;
+    opacity: 1;
+}
+
+.container ul li {
+    list-style: none;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.container ul li input {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.container .btns {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.container .btns button {
+    padding: 5px 8px;
+    background: rgb(7, 16, 148);
+    color: #fff;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 1px 1px;
+    text-transform: capitalize;
+}
+
+.container .btns button:last-child {
+    margin-right: 20px
+}
+
+.container .btns button:hover {
+    transform: scale(1.1);
+}

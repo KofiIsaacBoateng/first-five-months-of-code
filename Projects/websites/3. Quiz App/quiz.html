@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="h1text">QUIZ</h1>
+        <h2 id="question">QUESTION</h2>
+        <ul>
+            <li><input type="radio" name="answer" class="answer" id="a"><label for="a" id='aa'>answer</label></li>
+            <li><input type="radio" name="answer" class="answer" id="b"><label for="b" id='bb'>answer</label></li>
+            <li><input type="radio" name="answer" class="answer" id="c"><label for="c" id='cc'>answer</label></li>
+            <li><input type="radio" name="answer" class="answer" id="d"><label for="d" id='dd'>answer</label></li>
+        </ul>
+
+        <div class="btns">
+            <button class='prev' id="prev">Prev</button>
+            <button class='next' id="next">Next</button>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        problems = [{
+                question: 'Who is the President of the United States?',
+                a: 'Donald Trump',
+                b: 'Jacob Zuma',
+                c: 'Joseph Biden',
+                d: 'Kenyata',
+                answer: 'c'
+            },
+
+            {
+                question: 'How many countries are there in Africa?',
+                a: '1',
+                b: '12',
+                c: '53',
+                d: '54',
+                answer: 'd'
+            },
+
+            {
+                question: 'What is ebony popularly known to be?',
+                a: 'fart',
+                b: 'wind',
+                c: 'wood',
+                d: 'soda',
+                answer: 'c'
+            },
+
+            {
+                question: 'What flies without wings and cries without eyes?',
+                a: 'hummingbird',
+                b: 'clouds',
+                c: 'waterfalls',
+                d: 'Egyptian turtle',
+                answer: 'b'
+            },
+
+            {
+                question: 'Who is the richest man on earth?',
+                a: 'Elon Musk',
+                b: 'Jeff Bezos',
+                c: 'Yo mama',
+                d: 'none',
+                answer: 'a'
+            }
+        ];
+
+        let score = 0;
+        let questions = document.getElementById('question');
+        let atext = document.getElementById('aa');
+        let btext = document.getElementById('bb');
+        let ctext = document.getElementById('cc');
+        let dtext = document.getElementById('dd');
+        let prev = document.getElementById('prev');
+        let next = document.getElementById('next');
+        let quiz = document.getElementById('h1text');
+        let radio = document.querySelectorAll('.answer');
+        let buttons = document.querySelector('.btns');
+
+
+        let currentQuestion = 0;
+
+        loadProblem();
+
+        function loadProblem() {
+            var currentProblem = problems[currentQuestion];
+            questions.innerText = currentProblem.question;
+            atext.innerText = currentProblem.a;
+            btext.innerText = currentProblem.b;
+            ctext.innerText = currentProblem.c;
+            dtext.innerText = currentProblem.d;
+
+            if (currentQuestion === problems.length - 1) {
+                next.innerText = 'finish';
+            } else {
+                next.innerText = 'next';
+            }
+
+            if (currentQuestion === 0) {
+                prev.style.backgroundColor = 'rgb(7, 16, 148, 0)';
+            } else {
+                prev.style.backgroundColor = 'rgb(7, 16, 148)';
+            }
+
+
+
+        }
+
+        next.addEventListener('click', () => {
+            let num = 0;
+            radio.forEach((btn, i) => {
+                if (btn.checked === true) {
+                    num++;
+                }
+            })
+
+            if (num > 0) {
+                if (currentQuestion < problems.length) {
+                    scoreChecker();
+                    scoreDisplay();
+                }
+                if (currentQuestion < problems.length - 1) {
+                    currentQuestion++;
+                    loadProblem();
+                }
+            }
+
+            radio.forEach(btn => btn.checked = false);
+
+        })
+
+        prev.addEventListener('click', () => {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadProblem();
+            }
+            radio.forEach(btn => btn.checked = false)
+        })
+
+
+
+        function scoreChecker() {
+            let index = 0;
+            let ans = '';
+            radio.forEach((btn, i) => {
+                if (btn.checked === true) {
+                    index += i;
+                }
+            })
+
+            if (index == 0) {
+                ans += 'a';
+            } else if (index == 1) {
+                ans += 'b';
+            } else if (index == 2) {
+                ans += 'c';
+            } else {
+                ans += 'd';
+            }
+            if (currentQuestion < problems.length) {
+                if (ans === problems[currentQuestion].answer) {
+                    score = score + 20;
+                } else {
+                    score += 0;
+                }
+
+            }
+
+            console.log(score);
+
+        }
+
+        function scoreDisplay() {
+            if (currentQuestion === problems.length - 1) {
+                question.innerHTML = `<h2>CONGRATULATIONS</h2><br><br> <p>You Scored ${score} / 100 </p>`;
+                radio.forEach(btn => btn.style.display = 'none');
+                buttons.innerHTML = '';
+                atext.innerText = '';
+                btext.innerText = '';
+                ctext.innerText = '';
+                dtext.innerText = '';
+                quiz.innerText = '';
+            }
+        }
+    </script>
+</body>
+
+</html>
