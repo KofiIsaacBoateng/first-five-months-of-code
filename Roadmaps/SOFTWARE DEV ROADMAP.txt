@@ -1,0 +1,32 @@
+* HTML                            X
+* CSS                             X
+* JAVASCRIPT                      X
+* WEB-DEV TOOLS
+* GIT/GITHUB
+* NPM AND YARN
+* Bootstrap
+* JQuery
+* Redux
+* FRAMEWORKS      REACT                                ANGULAR                           VUE
+* SASS                                                 LESS                              STYLUS         
+* TYPESCRIPT                                           COFFEESCRIPT     
+*END TO END TESTING WITH CYPRESS.IO
+
+
+BACKEND ............ 
+
+* LINUX FUNDAMENTALS
+*NODE.JS   smooth
+*PYTHON  
+*JAVA  
+
+*DATABASE  MYSQL mongoDB   
+
+WEB SECURITIES....... 
+*CI/CD 
+*CACHING   REDIS 
+
+
+*CLOUD SERVICES   AWS    DIGITAL OCEAN
+
+                             
