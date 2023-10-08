@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pepsi</title>
+    <link rel="stylesheet" type="text/css" href="all.css">
+    <link rel="stylesheet" href="pepsi.css">
+</head>
+
+<body class="body">
+    <section class="all">
+        <header>
+            <img src="logo.png" alt="">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">what's new</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">contact us</a></li>
+                <li><a href="#">Buy</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <h1>that's all <br> <span>i like...</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repellendus magni maxime rerum blanditiis illum quo, ut similique cumque recusandae cupiditate facilis veniam perspiciatis harum voluptas amet, officiis odio neque! Lorem ipsum dolor
+                sit amet consectetur, adipisicing elit. Praesentium eos velit unde? Tempore nobis, tempora aliquam veniam expedita laudantium neque repudiandae natus assumenda ducimus, quod deleniti atque ratione architecto nesciunt. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Fugit culpa aliquam porro a beatae consequuntur veritatis odio laboriosam optio! Aliquam est magnam modi dolorum iste at ab tempore expedita tenetur. lorem</p>
+
+            <a href="#" class="link">view products</a>
+            <img src="1.png" alt="" class="pepsiCans">
+        </div>
+        <div class="media-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+
+        <div class="changeNavs">
+            <img src="1.png" alt="" onclick="switchCans('1.png'); changeColors('#1B4EF9', '#1B4EF9','#fff', '#1949e6', '#1949e6', '#fff')">
+            <img src="3.png" alt="" onclick="switchCans('3.png'); changeColors('#0E0E10', '#0E0E10', '#fff', '#0E0E10', '#0E0E10', '#fff')">
+            <img src="2.png" alt="" onclick="switchCans('2.png'); changeColors('#F80808', '#F80808', 'silver', '#F80808', '#F80808', '#fff')">
+        </div>
+
+
+
+    </section>
+</body>
+
+
+<script>
+    function switchCans(link) {
+        document.querySelector('.pepsiCans').src = link;
+    }
+
+    function changeColors(color, xbody, xbfaf, xcon, xconbf, xtheRest) {
+        let back = document.querySelector('.all');
+        let bod = document.querySelector('.body');
+        back.style.background = color;
+        bod.style.setProperty('--body', xbody);
+        bod.style.setProperty('--bfaf', xbfaf);
+        bod.style.setProperty('--content', xcon);
+        bod.style.setProperty('--conbf', xconbf);
+        bod.style.setProperty('--theRest', xtheRest);
+
+    }
+</script>
+
+</html>
