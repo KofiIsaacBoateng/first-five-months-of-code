@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoImgSlider</title>
+    <link rel="stylesheet" href="imgslider.css">
+</head>
+
+<body>
+    <div class="sliders">
+        <div class="slider">
+            <input type="radio" name="radio" id="rad1" checked>
+            <input type="radio" name="radio" id="rad2">
+            <input type="radio" name="radio" id="rad3">
+            <input type="radio" name="radio" id="rad4">
+            <input type="radio" name="radio" id="rad5">
+
+            <div class="slide first">
+                <img src="1.jpeg" alt="">
+            </div>
+            <div class="slide">
+                <img src="2.jpeg" alt="">
+            </div>
+            <div class="slide">
+                <img src="4.jpeg" alt="">
+            </div>
+            <div class="slide">
+                <img src="5.jpeg" alt="">
+            </div>
+            <div class="slide">
+                <img src="6.jpeg" alt="">
+            </div>
+
+            <div class="radBtn">
+                <div class="btn1"></div>
+                <div class="btn2"></div>
+                <div class="btn3"></div>
+                <div class="btn4"></div>
+                <div class="btn5"></div>
+            </div>
+
+        </div>
+
+        <div class="radBtns">
+            <label for="rad1" class="btns"></label>
+            <label for="rad2" class="btns"></label>
+            <label for="rad3" class="btns"></label>
+            <label for="rad4" class="btns"></label>
+            <label for="rad5" class="btns"></label>
+        </div>
+    </div>
+
+
+
+    <script>
+        let counter = 2;
+
+
+        function autoSlider() {
+            document.getElementById('rad' + counter).checked = true;
+            if (counter < 5) {
+                counter++;
+            } else {
+                counter = 1;
+            }
+        }
+
+        setInterval(autoSlider, 3000);
+    </script>
+
+</body>
+
+</html>

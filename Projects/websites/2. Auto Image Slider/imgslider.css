@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(28, 144, 252);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sliders {
+    width: 800px;
+    height: 500px;
+    top: 50px;
+    overflow: hidden;
+}
+
+.slider {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slide {
+    position: relative;
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 800px;
+    height: 500px;
+}
+
+.slider input {
+    display: none;
+}
+
+.radBtns {
+    width: 800px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.btns {
+    padding: 5px;
+    border: 2px solid rgb(28, 144, 252);
+    border-radius: 20px;
+    transition: .5s;
+    transform: translateY(-50px);
+}
+
+.btns:hover {
+    background: rgb(28, 114, 252);
+}
+
+.btns:not(:last-child) {
+    margin-right: 40px;
+}
+
+#rad1:checked~.first {
+    margin-left: 0;
+}
+
+#rad2:checked~.first {
+    margin-left: -800px;
+}
+
+#rad3:checked~.first {
+    margin-left: -1600px;
+}
+
+#rad4:checked~.first {
+    margin-left: -2400px;
+}
+
+#rad5:checked~.first {
+    margin-left: -3200px;
+}
+
+.radBtn {
+    width: 800px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    transform: translateY(450px);
+}
+
+.radBtn div {
+    padding: 5px;
+    border: 2px solid rgb(28, 114, 252);
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.radBtn div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#rad1:checked~.radBtn .btn1 {
+    background: rgb(28, 114, 252);
+}
+
+#rad2:checked~.radBtn .btn2 {
+    background: rgb(28, 114, 252);
+}
+
+#rad3:checked~.radBtn .btn3 {
+    background: rgb(28, 114, 252);
+}
+
+#rad4:checked~.radBtn .btn4 {
+    background: rgb(28, 114, 252);
+}
+
+#rad5:checked~.radBtn .btn5 {
+    background: rgb(28, 114, 252);
+}
