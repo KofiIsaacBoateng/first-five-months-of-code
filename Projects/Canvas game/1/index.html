@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas game 1</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    div {
+        position: absolute;
+        color: #fff;
+        font-size: 25px;
+        padding: 20px;
+        top: 0;
+        left: 0;
+        font-weight: 500;
+        user-select: none;
+    }
+    
+    div span {
+        font-weight: 300;
+    }
+    
+    .startGame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        color: #333;
+        padding: 50px 100px;
+        display: flex;
+        flex-flow: column;
+        background: linear-gradient(to right, rgba(0, 255, 255, 0.9), rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0.7));
+    }
+    
+    .startGame h1 {
+        font-size: 45px;
+        letter-spacing: 3px;
+        font-weight: 700;
+        transform: translateY(-20px);
+    }
+    
+    .startGame p {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .endGame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        width: 600px;
+        color: #333;
+        padding: 50px 100px;
+        background: linear-gradient(to right, rgba(0, 255, 255, 0.9), rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0.8), rgba(0, 255, 255, 0.7));
+        display: none;
+    }
+    
+    .endGame h1 {
+        font-size: 65px;
+        transform: translateY(-20px);
+    }
+    
+    .endGame p {
+        transform: translateY(-20px);
+    }
+    
+    button {
+        background: none;
+        border: none;
+        font-size: 30px;
+        background: rgba(22, 37, 245, 0.699);
+        padding: 8px 100px;
+        border-radius: 70px;
+        color: #fff;
+        box-shadow: 0 20px 30px #888;
+        transition: 0.5s ease;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        transform: scale(0.8);
+        box-shadow: none;
+    }
+</style>
+
+<body>
+    <div class="startGame">
+        <h1>SAY WHAAT!!!</h1>
+        <p>Welcome TO My First Javascript Game</p>
+        <button class="startButton">Start</button>
+    </div>
+    <div class="endGame">
+        <h1>GAME OVER</h1>
+
+        <p>Your Current Score:
+            <h1 id="fscore">0</h1>
+        </p>
+        <button class="playAgain">Play Again</button>
+    </div>
+    <div>Points: <span id="score">0</span> </div>
+    <canvas id="canvas"></canvas>
+    <script src="app.js"></script>
+</body>
+
+</html>
