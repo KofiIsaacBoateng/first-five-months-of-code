@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #000;
+}
+
+canvas {
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+
+/* #generate {
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ddd;
+    z-index: 999;
+    border: none;
+    margin: 10px;
+    padding: 10px 50px;
+    box-shadow: 0 20px 10px #222;
+    cursor: pointer;
+}
+
+.controls {
+    position: relative;
+    z-index: 999;
+    width: 300px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+    font-size: 20px;
+}
+
+#angle {
+    z-index: 999;
+    position: relative;
+} */
