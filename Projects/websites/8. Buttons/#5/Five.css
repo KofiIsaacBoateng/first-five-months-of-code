@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background: #0c0c0c;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    margin: 40px;
+    color: rgb(255, 255, 255, 0.5);
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+a:hover {
+    background: var(--clor);
+    box-shadow: 0 0 20px var(--clor), 0 0 60px var(--clor), 0 0 80px var(--clor), 0 0 100px var(--clor), 0 0 120px var(--clor);
+    transition: 2s;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 400%;
+    background: var(--clor);
+    animation: animate 2s linear infinite;
+    transition: 1s;
+}
+
+a:hover::before {
+    width: 100%;
+    transition: 1s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    background: #0c0c0c;
+    inset: 4px;
+}
+
+a:hover::after {
+    background: var(--clor);
+    transition: 1s;
+}
+
+a span {
+    font-size: 20px;
+    letter-spacing: 4px;
+    z-index: 1;
+    color: rgb(255, 255, 255, 0.5);
+}
+
+a:hover span {
+    color: rgb(255, 255, 255);
+    transition: 1s;
+}
