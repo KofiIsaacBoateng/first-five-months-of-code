@@ -1,0 +1,58 @@
+        CIRCULAR MOTION HANDOUT
+ (not a big thing.Just some canvas shit)
+
+//Always use the original value of this.x and this.y
+//x -> cosine and    y -> sin
+
+## Make a particle oscillate along an axis
+//add the sin or cos of the radians(any number) to the original value(position'x or y') of the axis NB::increment the radian value everytime by a velocity(any number..adjust to your preference)
+//This will cause the particle to oscilate along the axis(oscilation is infinitestimal)
+//(333) To cause a visible oscillation, multiply the sin or cos value by a much bigger value..and adapt it to your preference.
+//Finally to cause the object to move in a circular motion,
+  ////use cos for the x->axis and sin for the y -> axis.
+  ////The particle should be moving in a circle with its position as its center;
+
+
+## For multiple particles to move along the same circle but at diff positions on the circle
+//Your radians should be 1. different numbers(recommend using math.random)  2. Multiply by Math.PI * 2
+
+##For particles to be at different positions from the center
+//Option (333) should be a random value within a controlled range(distanceFromCenter variable);
+	///Effect actually is cool because there is no minimal center(I know what that means) and it looks like some 3D shit;
+	///To fix that, makesure your x and y distance from the center are the same.
+
+
+
+
+
+//BONUS ROUND -> MOUSE DRAG EFFECT
+	Just reduce the distance an object moves along width the mouse.
+	If the mouse moves 100, set the object to move a minute percentage of 100.
+	You do this by recording the mouse current location and finding its difference with the objects location and multiplying by the percentage you would want the object to move.
+
+//BONUS BONUS ROUND -> GLOW EFFECT
+	Just add shadowColor and ShadowBlur to your particles
+
+//BONUS BONUS BONUS ROUND -> CANVAS ROTATION TO EFFECT CIRCULAR MOTION ILLUSION
+	Save current state of the canvas.
+	Rotate the canvas using radians(canvas will move off the screen:::I know why)
+	Translate back to the original position(that is the center of the canvas)
+	Restore the saved canvas state and you're done!!!
+	NB: Makesure to add and increment value to increase your radians each time.
+
+
+
+				
+
+
+				SINE WAVES 
+
+//Draw a line pixel by pixel increasing the value of the axis (for loop) and kepping the opposite axis constant
+			//The above effect allows you to control the amplitude of the wave along the other axis using sin.
+
+//To get the waves, increase the value of the other axis by sin of an incremental value(this produces a very minute effect)
+			//To resolve that, multiply the sine value by a much bigger value
+
+//To get your wave to widen up, multiply your increseasing value in the sin function by a very small number to achieve this.
+			//Now you have your wave
+
