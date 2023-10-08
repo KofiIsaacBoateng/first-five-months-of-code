@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="all.css">
+    <link rel="stylesheet" href="web.css">
+</head>
+
+<body>
+    <header>
+        <h1>Super<span>Fly</span></h1>
+        <div class="navigations ">
+            <div class="navs "><span>Home</span></div>
+            <div class="navs "><span>About</span></div>
+            <div class="navs "><span>Blog</span></div>
+            <div class="navs "><span>Try Us</span></div>
+            <div class="navs "><span>Contact</span></div>
+        </div>
+    </header>
+
+
+    <section>
+        <video src="1.mp4 " muted autoplay loop class="slider change "></video>
+        <video src="2.mp4 " muted autoplay loop class="slider "></video>
+        <video src="3.mp4 " muted autoplay loop class="slider "></video>
+        <video src="4.mp4 " muted autoplay loop class="slider "></video>
+        <video src="5.mp4 " muted autoplay loop class="slider "></video>
+        <div class="content change ">
+            <h1>Feeling...<br><span>superfly</span></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, dolorum fugiat minus harum impedit dignissimos soluta ipsa deleniti ducimus eveniet nam ratione, placeat vitae pariatur numquam temporibus labore, autem natus? Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Nam corrupti nulla fuga dolores neque in, architecto maxime atque adipisci quod. Officiis corrupti excepturi perspiciatis atque deleniti labore fugiat et at! Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Impedit inventore iste corporis rem nam fuga atque id, doloribus quibusdam iusto exercitationem. Accusamus ipsum illum sunt quas consectetur natus earum atque!</p>
+        </div>
+
+        <div class="content ">
+            <h1>Experience...<br><span>superfly</span></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, dolorum fugiat minus harum impedit dignissimos soluta ipsa deleniti ducimus eveniet nam ratione, placeat vitae pariatur numquam temporibus labore, autem natus? Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Nam corrupti nulla fuga dolores neque in, architecto maxime atque adipisci quod. Officiis corrupti excepturi perspiciatis atque deleniti labore fugiat et at! Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Impedit inventore iste corporis rem nam fuga atque id, doloribus quibusdam iusto exercitationem. Accusamus ipsum illum sunt quas consectetur natus earum atque!</p>
+        </div>
+
+        <div class="content ">
+            <h1>Travellings...<br><span>superfly</span></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, dolorum fugiat minus harum impedit dignissimos soluta ipsa deleniti ducimus eveniet nam ratione, placeat vitae pariatur numquam temporibus labore, autem natus? Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Nam corrupti nulla fuga dolores neque in, architecto maxime atque adipisci quod. Officiis corrupti excepturi perspiciatis atque deleniti labore fugiat et at! Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Impedit inventore iste corporis rem nam fuga atque id, doloribus quibusdam iusto exercitationem. Accusamus ipsum illum sunt quas consectetur natus earum atque!</p>
+        </div>
+
+        <div class="content ">
+            <h1>Observations...<br><span>superfly</span></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, dolorum fugiat minus harum impedit dignissimos soluta ipsa deleniti ducimus eveniet nam ratione, placeat vitae pariatur numquam temporibus labore, autem natus? Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Nam corrupti nulla fuga dolores neque in, architecto maxime atque adipisci quod. Officiis corrupti excepturi perspiciatis atque deleniti labore fugiat et at! Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Impedit inventore iste corporis rem nam fuga atque id, doloribus quibusdam iusto exercitationem. Accusamus ipsum illum sunt quas consectetur natus earum atque!</p>
+        </div>
+
+        <div class="content ">
+            <h1>Experimentations...<br><span>superfly</span></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, dolorum fugiat minus harum impedit dignissimos soluta ipsa deleniti ducimus eveniet nam ratione, placeat vitae pariatur numquam temporibus labore, autem natus? Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Nam corrupti nulla fuga dolores neque in, architecto maxime atque adipisci quod. Officiis corrupti excepturi perspiciatis atque deleniti labore fugiat et at! Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Impedit inventore iste corporis rem nam fuga atque id, doloribus quibusdam iusto exercitationem. Accusamus ipsum illum sunt quas consectetur natus earum atque!</p>
+        </div>
+
+
+        <div class="media-icons ">
+            <i class="fa-brands fa-facebook-f "></i>
+            <i class="fa-brands fa-twitter "></i>
+            <i class="fa-brands fa-instagram "></i>
+        </div>
+
+        <div class="signUp "><span>sign up</span></div>
+
+        <div class="slideBtn ">
+            <div class="rounds active "></div>
+            <div class="rounds "></div>
+            <div class="rounds "></div>
+            <div class="rounds "></div>
+            <div class="rounds "></div>
+        </div>
+    </section>
+
+
+
+
+
+</body>
+
+
+<script>
+    let vids = document.querySelectorAll('.slider');
+    let btns = document.querySelectorAll('.rounds');
+    let content = document.querySelectorAll('.content');
+    let add = 1;
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener('click', () => toggler(i));
+    })
+
+    function toggler(increment) {
+        btns.forEach((btn => {
+            btn.classList.remove('active');
+        }))
+
+        vids.forEach((vid => {
+            vid.classList.remove('change');
+        }))
+
+        content.forEach((con => {
+            con.classList.remove('change');
+        }))
+
+        btns[increment].classList.add('active');
+        vids[increment].classList.add('change');
+        content[increment].classList.add('change');
+        add = increment;
+    }
+
+    setInterval(() => {
+        btns.forEach(btn => {
+            btn.classList.remove('active');
+        })
+
+        vids.forEach((vid => {
+            vid.classList.remove('change');
+        }))
+
+        content.forEach((con => {
+            con.classList.remove('change');
+        }))
+
+        if (add == 5) {
+            add = 0;
+        }
+
+        btns[add].classList.add('active');
+        content[add].classList.add('change');
+        vids[add].classList.add('change');
+        add++;
+
+
+    }, 8000);
+</script>
+
+</html>
