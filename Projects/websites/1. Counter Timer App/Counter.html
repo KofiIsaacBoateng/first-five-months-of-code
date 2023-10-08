@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="counter.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="subContainer">
+            <h1 id='h1'>counter app</h1>
+
+            <img src="counter.jpg" alt="blueRose">
+            <div class="bottom"></div>
+            <div class="timer">
+                <div class="con">
+                    <div id="days" class="top">00</div>
+                    <div class="midway">Days</div>
+                </div>
+                <div class="con">
+                    <div id="hours" class="top">00</div>
+                    <div class="midway">Hours</div>
+                </div>
+                <div class="con">
+                    <div id="minutes" class="top">00</div>
+                    <div class="midway">minutes</div>
+                </div>
+                <div class="con">
+                    <div id="seconds" class="top">00</div>
+                    <div class="midway">seconds</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        alert('WELCOME!!!');
+        let name = prompt('ENTER THE NAME OF THE OCCASION YOU WOULD LIKE TO TIME???');
+        let date = prompt('Enter date of the occasion! Date should be of the format "22 january 2022"');
+        const days = document.getElementById('days');
+        const hours = document.getElementById('hours');
+        const minutes = document.getElementById('minutes');
+        const seconds = document.getElementById('seconds');
+        const h1 = document.getElementById('h1');
+        h1.innerText = name;
+        const occasion = new Date(date);
+
+        function zeroAdder(time) {
+            return time < 10 ? (`0${time}`) : time;
+        }
+
+
+        function calculator() {
+            const today = new Date();
+            const timeLeft = occasion - today;
+            let timeLeftInSeconds = Math.floor(timeLeft / 1000);
+            let second = Math.floor(timeLeftInSeconds % 60);
+            let minute = Math.floor(timeLeftInSeconds / 60 % 60);
+            let hour = Math.floor(timeLeftInSeconds / 60 / 60 % 24);
+            let day = Math.floor(timeLeftInSeconds / 60 / 60 / 24);
+
+            days.innerText = zeroAdder(day);
+            hours.innerText = zeroAdder(hour);
+            minutes.innerText = zeroAdder(minute);
+            seconds.innerText = zeroAdder(second);
+
+
+        }
+
+
+
+
+        let k = setInterval(calculator, 1000);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #069BF4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subContainer {
+    width: 95%;
+    height: 100%;
+    position: relative;
+}
+
+.subContainer h1 {
+    position: absolute;
+    color: #ccced3;
+    z-index: 999;
+    text-transform: uppercase;
+    left: 40%;
+    top: 20%;
+}
+
+.subContainer img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 888;
+}
+
+.subContainer .bottom {
+    width: 100%;
+    height: 50%;
+    z-index: 888;
+    position: absolute;
+    top: 50%;
+}
+
+.subContainer .bottom::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background: #fff;
+    opacity: 0.2;
+}
+
+.subContainer .timer {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top: 40%;
+    z-index: 999;
+}
+
+.subContainer .timer .con {
+    width: 20%;
+    height: 100px;
+    color: #fff;
+    text-align: center;
+}
+
+.subContainer .timer .con::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 22%;
+    top: -2%;
+    left: 0;
+    opacity: 0.1;
+    background: #fff;
+}
+
+.subContainer .timer .con:not(:last-child) {
+    border-right: 2px solid #1B4FF9;
+    z-index: 1000;
+}
+
+.subContainer .timer .con::after {
+    content: '';
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    left: 0;
+    bottom: 65%;
+    background: #1B4FF9;
+    opacity: .2;
+    z-index: 777;
+}
+
+.subContainer .timer .con .top {
+    font-size: 30px;
+    position: absolute;
+    font-weight: 800;
+    top: 10px;
+    text-align: center;
+    margin-left: 70px;
+    letter-spacing: 10px;
+    z-index: 999;
+}
+
+.subContainer .timer .con .midway {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: absolute;
+    top: 70px;
+    text-align: center;
+    z-index: 10000;
+    margin-left: 50px;
+}
